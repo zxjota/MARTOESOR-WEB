@@ -1,280 +1,302 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - SRDNG</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
         }
         
         body {
             background-color: #f8f9fa;
             color: #333;
             line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
             padding: 20px;
         }
         
-        header {
-            background: linear-gradient(135deg, #1a365d 0%, #2d4d8c 100%);
-            color: white;
-            padding: 2.5rem 0;
-            text-align: center;
-            border-radius: 0 0 20px 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2.5rem;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            padding: 40px;
         }
         
-        .logo {
-            font-size: 2.8rem;
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .app-name {
+            color: #2563eb;
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 10px;
             letter-spacing: 1px;
         }
         
-        .logo span {
-            color: #5dade2;
-        }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            font-weight: 300;
+        .header-subtitle {
+            color: #666;
+            font-size: 1.1rem;
         }
         
         .contact-info {
-            background-color: #fff;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-            border-left: 4px solid #1a365d;
-        }
-        
-        .contact-info h3 {
-            color: #1a365d;
-            margin-bottom: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .contact-info h3 i {
-            color: #5dade2;
-        }
-        
-        .contact-info p {
-            margin-bottom: 0.5rem;
-        }
-        
-        .email-link {
-            color: #1a365d;
-            font-weight: 600;
-            text-decoration: none;
-            border-bottom: 1px dotted #1a365d;
-        }
-        
-        .email-link:hover {
-            color: #5dade2;
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 20px;
+            background-color: #f1f5f9;
+            border-radius: 20px;
+            color: #2563eb;
+            font-size: 0.95rem;
         }
         
         .last-updated {
-            text-align: right;
-            font-style: italic;
-            color: #666;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #eee;
+            display: inline-block;
+            background-color: #f0f9ff;
+            color: #0369a1;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 10px;
         }
         
         .policy-section {
-            background-color: white;
-            border-radius: 10px;
-            margin-bottom: 1.5rem;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
+            margin-bottom: 35px;
         }
         
-        .policy-section:hover {
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        .policy-section h2 {
+            color: #1e40af;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f1f5f9;
         }
         
-        .section-header {
-            padding: 1.5rem;
-            background-color: #f1f8ff;
-            border-left: 4px solid #1a365d;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .policy-section p {
+            margin-bottom: 15px;
+            color: #444;
         }
         
-        .section-header h2 {
-            color: #1a365d;
-            font-size: 1.3rem;
-            font-weight: 600;
+        .policy-section ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
         }
         
-        .section-header i {
-            color: #5dade2;
-            transition: transform 0.3s ease;
+        .policy-section li {
+            margin-bottom: 8px;
+            color: #444;
         }
         
-        .section-content {
-            padding: 0 1.5rem;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        
-        .section-content.active {
-            padding: 1.5rem;
-            max-height: 2000px;
-        }
-        
-        .section-content p {
-            margin-bottom: 1rem;
-        }
-        
-        .section-content ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .section-content li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .highlight {
-            background-color: #f1f8ff;
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-weight: 600;
-            color: #1a365d;
+        .highlight-box {
+            background-color: #f8fafc;
+            border-left: 4px solid #2563eb;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
         }
         
         footer {
             text-align: center;
-            padding: 2rem 0;
-            margin-top: 2rem;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eaeaea;
             color: #666;
-            border-top: 1px solid #eee;
             font-size: 0.9rem;
         }
         
-        .app-name {
-            font-weight: 700;
-            color: #1a365d;
+        .footer-links {
+            margin-top: 15px;
         }
         
-        .effective-date {
-            font-weight: 600;
-            color: #1a365d;
+        .footer-links a {
+            color: #2563eb;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
         }
         
         @media (max-width: 768px) {
             .container {
-                padding: 15px;
+                padding: 25px;
             }
             
-            header {
-                padding: 1.8rem 0;
-                border-radius: 0 0 15px 15px;
+            .app-name {
+                font-size: 2rem;
             }
             
-            .logo {
-                font-size: 2.2rem;
-            }
-            
-            .section-header h2 {
-                font-size: 1.2rem;
-            }
-            
-            .section-content, .section-content.active {
-                padding-left: 1.2rem;
-                padding-right: 1.2rem;
+            .policy-section h2 {
+                font-size: 1.3rem;
             }
         }
         
         @media (max-width: 480px) {
-            .logo {
-                font-size: 1.8rem;
+            body {
+                padding: 10px;
             }
             
-            .subtitle {
-                font-size: 1rem;
-            }
-            
-            .section-header {
-                padding: 1.2rem;
-            }
-            
-            .section-header h2 {
-                font-size: 1.1rem;
+            .container {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 class="logo">SRDNG</h1>
-            <p class="subtitle">Privacy Policy and Data Protection</p>
-        </div>
-    </header>
-    
     <div class="container">
-        <div class="contact-info">
-            <h3><i class="fas fa-envelope"></i> Contact Information</h3>
-            <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
-            <p>Email: <a href="mailto:cucionindonesia@gmail.com" class="email-link">cucionindonesia@gmail.com</a></p>
-            <p>This privacy policy applies to the SRDNG application and related services.</p>
-        </div>
-        
-        <div class="last-updated">
-            Last Updated: <span class="effective-date">January 9, 2026</span>
-        </div>
-        
-        <!-- The policy sections remain unchanged -->
-        
+        <header>
+            <h1 class="app-name">SRDNG</h1>
+            <p class="header-subtitle">Privacy Policy</p>
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i> cucionindonesia@gmail.com
+            </div>
+            <div class="last-updated">
+                Last Updated: January 22, 2026
+            </div>
+        </header>
+
+        <main>
+            <section class="policy-section">
+                <h2>Introduction</h2>
+                <p>This Privacy Policy explains how SRDNG collects, uses, and protects your information when you use our application. By using SRDNG, you agree to the collection and use of information in accordance with this policy.</p>
+            </section>
+
+            <section class="policy-section">
+                <h2>Information We Collect</h2>
+                <p><strong>Personal Information:</strong></p>
+                <ul>
+                    <li>Email address (if provided)</li>
+                    <li>Account information (username, password)</li>
+                    <li>Profile information you choose to share</li>
+                </ul>
+                
+                <p><strong>Usage Information:</strong></p>
+                <ul>
+                    <li>Device information (type, operating system)</li>
+                    <li>App usage data and preferences</li>
+                    <li>Performance and error information</li>
+                </ul>
+            </section>
+
+            <section class="policy-section">
+                <h2>How We Use Your Information</h2>
+                <p>We use the information we collect for the following purposes:</p>
+                <ul>
+                    <li>To provide and maintain our services</li>
+                    <li>To improve user experience and app functionality</li>
+                    <li>To communicate with you about updates and security</li>
+                    <li>To analyze usage patterns and optimize performance</li>
+                    <li>To ensure compliance with our terms of service</li>
+                </ul>
+            </section>
+
+            <section class="policy-section">
+                <h2>Data Security</h2>
+                <p>We implement security measures to protect your personal information. However, no method of electronic transmission or storage is 100% secure, and we cannot guarantee absolute security.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Security Measures Include:</strong></p>
+                    <ul>
+                        <li>Encryption of sensitive data</li>
+                        <li>Secure data storage practices</li>
+                        <li>Regular security assessments</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="policy-section">
+                <h2>Third-Party Services</h2>
+                <p>SRDNG may use third-party services that collect information to:</p>
+                <ul>
+                    <li>Analyze app usage and performance</li>
+                    <li>Process payments (if applicable)</li>
+                    <li>Provide customer support</li>
+                </ul>
+                <p>These third parties have their own privacy policies governing data use.</p>
+            </section>
+
+            <section class="policy-section">
+                <h2>Your Rights</h2>
+                <p>Depending on your location, you may have the right to:</p>
+                <ul>
+                    <li>Access your personal information</li>
+                    <li>Correct inaccurate information</li>
+                    <li>Request deletion of your data</li>
+                    <li>Opt-out of certain data collection</li>
+                </ul>
+                <p>To exercise these rights, contact us at cucionindonesia@gmail.com</p>
+            </section>
+
+            <section class="policy-section">
+                <h2>Children's Privacy</h2>
+                <p>SRDNG is not intended for children under 13. We do not knowingly collect information from children under 13. If you believe a child has provided us with personal information, contact us immediately.</p>
+            </section>
+
+            <section class="policy-section">
+                <h2>Policy Changes</h2>
+                <p>We may update this Privacy Policy periodically. We will notify you of significant changes by posting the new policy on this page and updating the "Last Updated" date.</p>
+                <p>Your continued use of SRDNG after changes constitutes acceptance of the updated policy.</p>
+            </section>
+
+            <section class="policy-section">
+                <h2>Contact Us</h2>
+                <p>If you have questions about this Privacy Policy, contact us at:</p>
+                <div class="highlight-box">
+                    <p><strong>Email:</strong> cucionindonesia@gmail.com</p>
+                    <p><strong>App:</strong> SRDNG</p>
+                </div>
+            </section>
+        </main>
+
         <footer>
             <p>&copy; 2026 SRDNG. All rights reserved.</p>
-            <p>This privacy policy applies to the SRDNG application and related services.</p>
+            <p>This Privacy Policy is written in American English.</p>
+            <div class="footer-links">
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#top">Back to Top</a>
+            </div>
         </footer>
     </div>
 
     <script>
-        // Toggle section content visibility
-        function toggleSection(sectionNum) {
-            const section = document.getElementById(`section${sectionNum}`);
-            const icon = document.querySelector(`#section${sectionNum}`).previousElementSibling.querySelector('i');
-            
-            // Toggle active class
-            section.classList.toggle('active');
-            
-            // Rotate icon
-            if (section.classList.contains('active')) {
-                icon.style.transform = 'rotate(180deg)';
-            } else {
-                icon.style.transform = 'rotate(0deg)';
-            }
-        }
-        
-        // Open the first section by default
-        document.addEventListener('DOMContentLoaded', function() {
-            toggleSection(1);
+        // Simple smooth scroll for back to top link
+        document.querySelector('a[href="#top"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
+        
+        // Add last updated date dynamically
+        document.addEventListener('DOMContentLoaded', function() {
+            const lastUpdated = document.querySelector('.last-updated');
+            const today = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = today.toLocaleDateString('en-US', options);
+            lastUpdated.innerHTML = `<i class="fas fa-calendar-alt"></i> Last Updated: ${formattedDate}`;
+        });
+    </script>
+    
+    <!-- Add Font Awesome for icons -->
+    <script>
+        // Create a simple icon for the email
+        const style = document.createElement('style');
+        style.textContent = `
+            .fa-envelope:before { content: "✉"; }
+            .fa-calendar-alt:before { content: "📅"; }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
